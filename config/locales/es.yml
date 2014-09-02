@@ -72,7 +72,7 @@ es:
 
     index:
       listing projects: "Listado de Proyectos"
-      are you sure you want to delete this project: "¿Estas seguro de querer borrar este proyecto? Esta acción no se puede deshacer."
+      are you sure you want to delete this project: "¿Estas seguro de borrar este proyecto? Pilas despues no la podras recuperar."
       the iteration starts on x with length of x weeks:
         one:    "Las iteraciones empiezan en %{day} con una duración de 1 semana"
         other:    "Las iteraciones empiezan en %{day} con una duración de %{count} semanas"

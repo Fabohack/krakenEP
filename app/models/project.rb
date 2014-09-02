@@ -36,9 +36,6 @@ class Project < ActiveRecord::Base
 
   has_many :stories, :dependent => :destroy do  
 
-  belongs_to :departamento
-
-  validates_presence_of :departamento
   
     # Populates the stories collection from a CSV string.
     def from_csv(csv_string)

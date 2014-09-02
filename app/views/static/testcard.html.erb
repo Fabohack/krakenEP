@@ -9,12 +9,12 @@ $(function() {
   project.stories.fetch = function() {};
   window.project = project;
 
-  var done = new Fulcrum.ColumnView({
+  /*var done = new Fulcrum.ColumnView({
     id: 'done', name: '<%= t('.done') %>', el: $('td.done_column'), sortable: false
   }).render();
   $('#column-toggles').append(
     new Fulcrum.ColumnVisibiltyButtonView({columnView: done}).render().el
-  );
+  );*/
 
   var in_progress = new Fulcrum.ColumnView({
     id: 'in_progress', name: '<%= t('.in_progress') %>', el: $('td.in_progress_column'),
@@ -24,12 +24,12 @@ $(function() {
     new Fulcrum.ColumnVisibiltyButtonView({columnView: in_progress}).render().el
   );
 
-  var backlog = new Fulcrum.ColumnView({
+  /*var backlog = new Fulcrum.ColumnView({
     id: 'backlog', name: '<%= t('.backlog') %>', el: $('td.backlog_column'), sortable: true
   }).render();
   $('#column-toggles').append(
     new Fulcrum.ColumnVisibiltyButtonView({columnView: backlog}).render().el
-  );
+  );*/
 
   var chilly_bin = new Fulcrum.ColumnView({
     id: 'chilly_bin', name: '<%= t('.icebox') %>', el: $('td.chilly_bin_column'),
