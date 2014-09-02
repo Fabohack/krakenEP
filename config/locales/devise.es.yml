@@ -1,0 +1,68 @@
+es:
+  devise:
+    confirmations:
+      confirmed: Tu cuenta fue confirmada. Ya iniciaste sesión.
+      send_instructions: Vas a recibir un correo con instrucciones sobre cómo confirmar
+        tu cuenta en unos pocos minutitos esperame un ratito.
+      send_paranoid_instructions: Si tu correo existe en nuestra base de datos, vas
+        a recibir un correo con instrucciones sobre cómo confirmar tu cuenta en unos
+        pocos minutos esperame un ratito.
+    failure:
+      already_authenticated: Ya has iniciado una sesión.
+      inactive: Tu cuenta aún no ha sido activada corre a ver tu correo electrónico.
+      invalid: Tu Contraseña o Correo no estan bien pana.
+      invalid_token: Código de autenticación inválido.
+      locked: Tu cuenta está bloqueada pilas.
+      timeout: Tu sesión expiró, manejame mas rapido por favor inicia sesión nuevamente para continuar.
+      unauthenticated: Tienes que iniciar sesión o registrarte para poder continuar habla serio.
+      unconfirmed: Tienes que confirmar tu cuenta para poder continuar checa tu mail.
+    mailer:
+      confirmation_instructions:
+        subject: Instrucciones de confirmación
+      reset_password_instructions:
+        subject: Instrucciones de recuperación de contraseña
+      unlock_instructions:
+        subject: Instrucciones para desbloquear
+    omniauth_callbacks:
+      failure: No has sido autorizado en la cuenta %{kind} porque "%{reason}".
+      success: Has sido autorizado satisfactoriamente de la cuenta %{kind}.
+    passwords:
+      send_instructions: Vas a recibir un correo con instrucciones sobre cómo resetear
+        tu contraseña en unos pocos minutos pilas revisando tu correo.
+      send_paranoid_instructions: Si tu correo existe en nuestra base de datos, vas
+        a recibir un correo con instrucciones sobre cómo resetear tu contraseña en
+        tu bandeja de entrada osea de tu correo electronico.
+      updated: Tu contraseña fue cambiada. Ya iniciaste sesión.
+      updated_not_active: Tu contraseña fue cambiada, bien pana.
+    registrations:
+      destroyed: Fue grato tenerte con nosotros. Tu cuenta fue cancelada osea chao brother.
+      signed_up: Bienvenido pana a YACHAY EP. Tu cuenta fue creada Mi nombre es Kraken y estare pendiente de ti.
+      signed_up_but_inactive: Tu cuenta ha sido creada correctamente. Sin embargo,
+        no hemos podido iniciar la sesión porque tu cuenta aún no está activada checa tu correo.
+      signed_up_but_locked: Tu cuenta ha sido creada correctamente. Sin embargo, no
+        hemos podido iniciar la sesión porque tu cuenta está bloqueada pilas.
+      signed_up_but_unconfirmed: Se ha enviado un mensaje con un enlace de confirmación
+        a tu correo electrónico. Abre el enlace para activar tu cuenta ya te falta poco.
+      update_needs_confirmation: Has actualizado tu cuenta correctamente, pero es
+        necesario confirmar tu nuevo correo electrónico. Por favor, comprueba tu correo
+        y sigue el enlace de confirmación para finalizar la comprobación del nuevo
+        correo eletrónico.
+      updated: Tu cuenta fue actualizada,bien vamos bien.
+    sessions:
+      signed_in: Sesión iniciada vamos bien pana.
+      signed_out: Sesión finalizada chao bro regresa pronto.
+    unlocks:
+      send_instructions: Vas a recibir instrucciones para desbloquear tu cuenta en
+        unos pocos minutos ten paciencia hermano y revisaras tu correo.
+      send_paranoid_instructions: Si tu cuenta existe, vas a recibir instrucciones
+        para desbloquear tu cuenta en unos pocos minutos paciencia amigo.
+      unlocked: Tu cuenta fue desbloqueada. Ya iniciaste sesión, bien.
+  errors:
+    messages:
+      already_confirmed: ya fue confirmado, por favor intenta iniciar sesión vamos tu puedes
+      expired: ha expirado, por favor solicita una nueva, a quien? pues al administrador del sistema
+      not_found: no se encontró nada bro
+      not_locked: no estaba bloqueado, ponte  pilas
+      not_saved:
+        one: ! 'Ocurrió un error al tratar de guardar chequealo amigo %{resource}:'
+        other: ! '%{count} errores ocurrieron al tratar de guardar %{resource}:'

@@ -1,0 +1,17 @@
+<% content_for :title_bar do %>
+  <h1>Olvisdaste tu password?</h1>
+<% end %>
+<div class="form-wrapper">
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field-wrapper">
+    <%= f.label :email %>
+    <div class="field"><%= f.email_field :email %></div>
+  </div>
+
+  <div class="actions"><%= f.submit "Enviar instrucciones para resetear su password" %></div>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>
+</div>

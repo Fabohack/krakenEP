@@ -1,0 +1,56 @@
+<% content_for :title_bar do %>
+  <%= render :partial => 'projects/nav', :locals => {:project => @project} %>
+<% end %>
+
+<h2>Importar tareas</h2>
+
+<p>
+Usted puede tareas con campos separados por coma en formato (CSV). La 
+primera linea del CSV debe contener las cabezeras correctas para importar
+este. Usted puede descargar en..
+<a href="/kraken_Import_Template.csv">CSV template</a> with the correct
+headers to get you started.
+</p>
+<p>
+Kraken intentara emparejar los nombres de usuario encontrados en el CSV con
+los miembros de su proyecto. Este seguro de agregar miembros con los nombres
+correctos antes de importar
+
+</p>
+<!--<p><em>Nota: Usted puede tambien usar un CSV  CSV export from Pivotal Tracker.</em></p>-->
+<%= form_tag import_upload_project_stories_path(@project), :multipart => true %>
+  <%= file_field_tag :csv %>
+  <%= submit_tag :import %>
+</form>
+
+<% if @stories %>
+  <h2>Import results</h2>
+
+  <table id="import">
+    <thead>
+      <tr>
+        <th>Row</th>
+        <th>Story</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @stories.each_with_index do |story, index| %>
+        <% if story.valid? %>
+        <tr class="valid">
+          <td><%= index + 1 %></td>
+          <td><%= story.title %></td>
+          <td><%= story.story_type %></td>
+        </tr>
+        <% else %>
+          <tr class="invalid">
+            <td><%= index + 1 %></td>
+            <td colspan="2">
+              <%= story.errors.full_messages.join(', ') %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
