@@ -1,5 +1,7 @@
 Fulcrum::Application.routes.draw do
 
+  resources :estados
+
   resources :departamentos
 
   get "story/new"

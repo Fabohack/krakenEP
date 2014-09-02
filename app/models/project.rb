@@ -27,6 +27,10 @@ class Project < ActiveRecord::Base
 
   validates :name, :presence => true
 
+  validates :descripcion, :presence => {:message => "Debes ingresar una descripcion"}, length: {minimum: 2, maximum: 4000, :message => "La descripción debe tener entre 2 y 4000 caracteres"}
+
+  validates :presupuesto, numericality: { only_double: true }
+
   validates_numericality_of :default_velocity, :greater_than => 0,
                             :only_integer => true
 

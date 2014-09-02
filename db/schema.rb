@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140902211354) do
+ActiveRecord::Schema.define(version: 20140902224249) do
 
   create_table "changesets", force: true do |t|
     t.integer  "story_id"
@@ -21,6 +21,12 @@ ActiveRecord::Schema.define(version: 20140902211354) do
   end
 
   create_table "departamentos", force: true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "estados", force: true do |t|
     t.string   "nombre"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -43,6 +49,8 @@ ActiveRecord::Schema.define(version: 20140902211354) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "default_velocity",    default: 10
+    t.string   "descripcion"
+    t.float    "presupuesto"
   end
 
   create_table "projects_users", id: false, force: true do |t|

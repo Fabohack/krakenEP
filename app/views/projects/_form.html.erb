@@ -8,6 +8,16 @@
   </div>
 
   <div class="field-wrapper">
+    <%= f.label :descripcion %>
+    <div class="field"><%= f.text_field :descripcion %></div>
+  </div>
+
+  <div class="field-wrapper">
+    <%= f.label :presupuesto %>
+    <div class="field"><%= f.text_field :presupuesto %></div>
+  </div>
+
+  <div class="field-wrapper">
     <%= f.label :point_scale %>
     <div class="field"><%= f.select :point_scale, point_scale_options %></div>
   </div>
@@ -32,16 +42,6 @@
     <div class="field"><%= f.select :iteration_length, iteration_length_options %></div>
   </div>
 
-  <div class="field-wrapper">
-    <%= f.label :descripcion %>
-    <div class="field"><%= f.text_field :descripcion %></div>
-  </div>
-
-  <div class="field-wrapper">
-    <%= f.label :presupuesto %>
-    <div class="field"><%= f.text_field :presupuesto %></div>
-  </div>
-  
 
   <div class="actions">
     <%= f.submit %>
